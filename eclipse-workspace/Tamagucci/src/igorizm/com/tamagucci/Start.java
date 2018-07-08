@@ -52,6 +52,7 @@ class Start {
         fw.write("\r\n");
         fw.write(String.valueOf(time.getS()));
         fw.close();
+        scan.close();
         time = null;
         if (food >= 1 | sleep >= 1) {
         	System.out.println("Введите f, если хотите восстановить сытость, s, если хотите восстановить сон, или quit, чтобы выйти");
@@ -70,6 +71,5 @@ class Start {
                 if (s.equals("quit")) break;
             }
         }
-        scan.close();
     }
 }
